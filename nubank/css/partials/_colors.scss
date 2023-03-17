@@ -1,0 +1,46 @@
+// Colors of the project
+
+// Brand colors
+
+$primary-normal: #82269E;
+$primary-dark: #701F88;
+$primary-light: #9C4FB4;
+
+$secondary-normal: #A950C4;
+$secondary-dark: #9142A8;
+$secondary-light: #BB71D2;
+
+//Neutral colors
+$black-normal: #232224;
+$black-dark: #161617;
+$black-light: #353426;
+
+$white-normal: #F7F2FA;
+$white-dark: #EDEAEF;
+$white-light: #FEFBFF;
+
+//Grey Scale
+$grey-1: #454446;
+$grey-2: #555456;
+$grey-3: #666566;
+$grey-4: #767576;
+$grey-5: #868587;
+$grey-6: #969597;
+$grey-7: #a6a6a7;
+
+//Auxiliary colors
+$red-normal: #EB3D3D;
+$red-dark: #D03333;
+$red-light: #F05454;
+
+$green-normal: #32D957;
+$green-dark: #28BB49;
+$green-light: #50E170;
+
+$yellow-normal: #ffce52;
+$yellow-dark: #d9b043;
+$yellow-light: #ffd76b;
+
+.color-white{
+    color: $white-light;
+}

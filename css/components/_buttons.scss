@@ -1,0 +1,94 @@
+a{
+    cursor: pointer;
+    display: inline-block;
+    color: $white-normal;
+    text-decoration: none;
+    transition: .5s ease;
+    @include typeface-2(p2, desktop);
+
+    &:hover{
+        opacity: .7;
+    }
+}
+
+.btn{
+    cursor: pointer;
+    position: relative;
+    padding: 12px 48px 12px 24px;
+    color: $white-light;
+    border: 2px solid $primary-dark;
+    border-radius: 8px;
+
+    @include typeface-2(p2,desktop);
+    transition: .5s ease;
+
+
+    &::after{
+        content: '';
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 50%;
+        right: 10%;
+        transform: translate(-50%, -50%) translate3d(8px,0,0);
+
+        background-image: url('../svg/arrow.svg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        transition: .5s ease;
+    }
+
+    &:hover{
+        opacity: .8;
+        
+        &::after{
+            transform: translate(-50%, -50%) translate3d(10px,-2px,0);
+        }
+    }
+}
+
+.link{
+    display: inline-block;
+    padding: 16px 16px 16px 32px;
+    position: relative;
+    color: $primary-normal;
+
+    
+    background-image: url("../svg/arrow-1.svg");
+    background-position: 0% 50%;
+    background-repeat: no-repeat;
+    
+
+    @include typeface-1(h5, desktop);
+    @include responsive(s){
+        @include typeface-1(h5, mobile);
+    }
+ 
+    &::after{
+        content: '';
+        display: block;
+        position: absolute;
+        top: 80%;
+        left: 24px;
+        width: 0%;
+        height: 2px;
+        border: 0;
+        border-radius: 1px;
+        transition: .5s ease;
+        background-color: $secondary-normal;
+    }
+
+    &:hover{
+        opacity: .7;
+        background-position: 8px 50%;
+
+        &::after{
+            width: 80%;
+        }
+    }
+}
+
+
+//VER PQ O GSAP NÃO ESTÁ FUNCIONANDO NO MOBILE, TERMINAR DE AJUSAR O CTA E O RESTO DO FOOTER

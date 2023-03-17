@@ -1,0 +1,61 @@
+// ======================================
+// =============== FOOTER ===============
+// ======================================
+
+.logo-footer{
+    width: 56px;
+    height: 56px;
+
+    @include responsive(xs){
+      width: 48px;
+      height: 48px;
+    }
+  }
+
+  .text-footer-mobile{
+    display: none;
+
+    @include responsive(s){
+      display: block;
+    }
+  }
+
+  .footer-list{
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .footer-link{
+    display: inline-block;
+    padding: 16px 16px 16px 16px;
+    transition: .5s ease;
+
+    &:hover{
+      padding: 8px 16px 16px 16px;
+    }
+
+    @include responsive(xxs){
+      display: inline-block;
+      padding: 16px 8px 16px 8px;
+      transition: .5s ease;
+
+      &:hover{
+        padding: 8px 8px 16px 8px;
+      }
+    }
+  }
+
+  .footer-cta{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+
+    @include responsive(s){
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+  }

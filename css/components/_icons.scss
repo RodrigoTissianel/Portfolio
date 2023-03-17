@@ -1,0 +1,16 @@
+.icons-works{
+    width: 32px;
+    height: 32px;
+
+    @include responsive(xxs){
+        width: 24px;
+        height: 24px;
+    }
+}
+
+.mouse-cursor{
+    width: 16px;
+    height: 16px;
+}
+
+//AJUSTAR A PARTE DAS SKILLS PARA ROW E GRID E AS ANIMAÇÕES PARA O GSAP (scroll trigger não está funcionando, REFAZER), VER O FOOTER NO RESPONSIVO
