@@ -164,6 +164,19 @@ html {
   }
 }
 
+.grid-12 {
+  width: calc(100% - 24px);
+  margin: 12px;
+  padding: 16px 0;
+  float: left;
+}
+@media screen and (max-width: 960px) {
+  .grid-12 {
+    width: calc(100% - 24px);
+    float: none;
+  }
+}
+
 .grid-nobreak1 {
   width: calc(8.3333333333% - 24px);
   margin: 12px;
@@ -529,8 +542,8 @@ html {
   content: "";
   z-index: -5;
   position: absolute;
-  top: 50%;
-  left: 20%;
+  top: 80%;
+  left: 30%;
   width: 150px;
   height: 150px;
   border: 0;

@@ -58,7 +58,7 @@ $gutter: 24px;
     @return ($col/$total) * 100%;
 }
 
-@for $i from 1 to 12{
+@for $i from 1 through 12{
     .grid-#{$i}{
         width: calc(#{grid($i)} - #{$gutter});
         margin: $gutter/2;
@@ -359,8 +359,8 @@ $gutter: 24px;
     content: '';
     z-index: -5;
     position: absolute;
-    top: 50%;
-    left: 20%;
+    top: 80%;
+    left: 30%;
     width: 150px;
     height: 150px;
     border: 0;
