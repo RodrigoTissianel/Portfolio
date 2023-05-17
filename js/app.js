@@ -143,7 +143,7 @@ mm.add({
     },{
         y: 0,
         opacity: 1,
-        ease: "power4.inOut",
+        ease: "power4.Out",
         duration: 2,
     })
     .fromTo(".expertise-item",{
@@ -152,7 +152,7 @@ mm.add({
     },{
         x: 0,
         opacity: 1,
-        ease: "power4.inOut",
+        ease: "power4.Out",
         duration: 2,
         stagger: .5,
     }, '-=1')
@@ -162,7 +162,7 @@ mm.add({
     },{
         y: 0,
         opacity: 1,
-        ease: "expo.inOut",
+        ease: "power4.Out",
         duration: 2,
         stagger: 1,
     }, '-=3.2')
@@ -172,7 +172,7 @@ mm.add({
     },{
         y: 0,
         opacity: 1,
-        ease: "power4.inOut",
+        ease: "power4.Out",
         duration: 2,
     }, '-=1.5')
     .fromTo(".other-skills-item",{
@@ -181,7 +181,7 @@ mm.add({
     },{
         x: 0,
         opacity: 1,
-        ease: "power4.inOut",
+        ease: "power4.Out",
         duration: 2,
         stagger: .5,
     }, '-=1')
@@ -191,7 +191,7 @@ mm.add({
     },{
         y: 0,
         opacity: 1,
-        ease: "expo.inOut",
+        ease: "power4.Out",
         duration: 2,
         stagger: 1,
     }, '-=3.2');
@@ -204,7 +204,7 @@ mm.add({
             trigger: ".name",
             start: "top 16%",
             end: "bottom 33%",
-            markers: true,
+            //markers: true,
             scrub: 3,
             },
             

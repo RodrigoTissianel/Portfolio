@@ -570,11 +570,11 @@ html {
 }
 
 .card-works {
-  width: 98%;
+  width: 100%;
   height: 525px;
   padding: 40px 0px 40px 40px;
   background-color: #111519;
-  border: 6px solid #2B2B2C;
+  border: 2px solid #2B2B2C;
   border-radius: 16px;
   overflow: hidden;
 }
@@ -2238,18 +2238,24 @@ header {
   transform-box: fill-box;
   transform-origin: center center;
   animation: circle-hero-move 20s ease infinite alternate;
+  filter: blur(12px);
+  -moz-filter: blur(12px);
 }
 
 .circle-hero-2 {
   transform-box: fill-box;
   transform-origin: center center;
   animation: circle-hero-move 20s ease 0.5s infinite alternate;
+  filter: blur(12px);
+  -moz-filter: blur(12px);
 }
 
 .circle-hero-3 {
   transform-box: fill-box;
   transform-origin: center center;
   animation: circle-hero-move 20s ease 1s infinite alternate;
+  filter: blur(12px);
+  -moz-filter: blur(12px);
 }
 
 @keyframes circle-hero-move {
@@ -2257,13 +2263,13 @@ header {
     transform: translate3d(0px, 0px, 0px) rotate(0deg);
   }
   20% {
-    transform: translate3d(-20px, -80px, 0px) rotate(0deg);
+    transform: translate3d(-20px, -75px, 0px) rotate(0deg);
   }
   40%, 60% {
-    transform: translate3d(-20px, 0px, 0px) rotate(360deg);
+    transform: translate3d(0px, 0px, 0px) rotate(360deg);
   }
   80% {
-    transform: translate3d(-20px, -80px, 0px) rotate(0deg);
+    transform: translate3d(-20px, -75px, 0px) rotate(0deg);
   }
   100% {
     transform: translate3d(0px, 0px, 0px) rotate(0deg);
@@ -2273,6 +2279,8 @@ header {
   transform-box: fill-box;
   transform-origin: center center;
   animation: square-1-rotate 16s 0.5s ease infinite alternate;
+  filter: blur(12px);
+  -moz-filter: blur(12px);
 }
 
 @keyframes square-1-rotate {
@@ -2287,6 +2295,8 @@ header {
   transform-box: fill-box;
   transform-origin: center center;
   animation: square-2-rotate 16s 1s ease infinite alternate;
+  filter: blur(12px);
+  -moz-filter: blur(12px);
 }
 
 @keyframes square-2-rotate {
@@ -2301,6 +2311,8 @@ header {
   transform-box: fill-box;
   transform-origin: center center;
   animation: square-3-rotate 16s 1.5s ease infinite alternate;
+  filter: blur(12px);
+  -moz-filter: blur(12px);
 }
 
 @keyframes square-3-rotate {
@@ -2315,6 +2327,8 @@ header {
   transform-box: fill-box;
   transform-origin: center center;
   animation: square-4-rotate 16s 2s ease infinite alternate;
+  filter: blur(12px);
+  -moz-filter: blur(12px);
 }
 
 @keyframes square-4-rotate {
