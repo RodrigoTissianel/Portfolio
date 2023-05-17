@@ -89,6 +89,7 @@ input, select, option, textarea{
 }
 
 input[type=date], select, option{
+  cursor: pointer;
   height: 44px;
 }
 
@@ -99,12 +100,15 @@ select{
     -moz-appearance: none;
 }
 */
+.search-input:focus{
+  outline: none;
+}
 
 .btn-search{
   cursor: pointer;
   height: 48px;
   width: 56px;
-  background-image: url('../../svg/icon-search.svg');
+  background-image: url('../svg/icon-search.svg');
   background-position: center center;
   background-repeat: no-repeat;
 

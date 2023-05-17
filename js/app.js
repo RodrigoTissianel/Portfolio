@@ -107,7 +107,6 @@ mm.add({
         trigger: ".name",
         start: isDesktop ? "top 21%" : isTablet ? "top 16%": isMobile ? "top 16%" : 0,
         end: isDesktop ? "bottom 33%" : isTablet ? "bottom 20%": isMobile ? "bottom 20%" : 0,
-        //markers: true,
         scrub: 3
         },
         
@@ -116,12 +115,10 @@ mm.add({
     //========== Surname animation ==========//
     gsap.to(".surname",{
         x: isDesktop ? -100 : isTablet ? -100 : isMobile ? -50 : 0,
-        //duration: 10,
         scrollTrigger:{
         trigger: ".name",
         start: isDesktop ? "top 21%" : isTablet ? "top 16%": isMobile ? "top 16%" : 0,
         end: isDesktop ? "bottom 33%" : isTablet ? "bottom 20%": isMobile ? "bottom 33%" : 0,
-        // markers: true,
         scrub: 3,
         },
         
@@ -133,7 +130,6 @@ mm.add({
             trigger: ".expertise-container",
             start: "top 50%",
             end: "bottom 60%",
-            //markers: true
         }
     });
 
@@ -204,7 +200,6 @@ mm.add({
             trigger: ".name",
             start: "top 16%",
             end: "bottom 33%",
-            //markers: true,
             scrub: 3,
             },
             
@@ -218,7 +213,6 @@ mm.add({
             trigger: ".name",
             start: "top 16%",
             end: "bottom 33%",
-            // markers: true,
             scrub: 3,
             },
             
