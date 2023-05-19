@@ -79,22 +79,25 @@
     transform-box: fill-box;
     transform-origin: center center;
     animation: circle-hero-move 20s ease infinite alternate;
-    filter: blur(12px);
     -moz-filter: blur(12px);
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
 }
 .circle-hero-2{
     transform-box: fill-box;
     transform-origin: center center;
     animation: circle-hero-move 20s ease .5s infinite alternate;
-    filter: blur(12px);
     -moz-filter: blur(12px);
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
 }
 .circle-hero-3{
     transform-box: fill-box;
     transform-origin: center center;
     animation: circle-hero-move 20s ease 1s infinite alternate;
-    filter: blur(12px);
     -moz-filter: blur(12px);
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
 }
 
 @keyframes circle-hero-move{
@@ -128,8 +131,9 @@
     transform-box: fill-box;
     transform-origin: center center;
     animation: square-1-rotate 16s .5s ease infinite alternate;
+    -moz-filter: blur(12px);
+    -webkit-filter: blur(12px);
     filter: blur(12px);
-    -moz-filter: blur(12px)
 }
 
 @keyframes square-1-rotate{
@@ -145,8 +149,9 @@
     transform-box: fill-box;
     transform-origin: center center;
     animation: square-2-rotate 16s 1s ease infinite alternate;
+    -moz-filter: blur(12px);
+    -webkit-filter: blur(12px);
     filter: blur(12px);
-    -moz-filter: blur(12px)
 }
 
 @keyframes square-2-rotate{
@@ -162,8 +167,9 @@
     transform-box: fill-box;
     transform-origin: center center;
     animation: square-3-rotate 16s 1.5s ease infinite alternate;
+    -moz-filter: blur(12px);
+    -webkit-filter: blur(12px);
     filter: blur(12px);
-    -moz-filter: blur(12px)
 }
 
 @keyframes square-3-rotate{
@@ -179,8 +185,9 @@
     transform-box: fill-box;
     transform-origin: center center;
     animation: square-4-rotate 16s 2s ease infinite alternate;
+    -moz-filter: blur(12px);
+    -webkit-filter: blur(12px);
     filter: blur(12px);
-    -moz-filter: blur(12px)
 }
 
 @keyframes square-4-rotate{

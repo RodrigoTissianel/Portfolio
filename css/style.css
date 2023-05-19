@@ -542,7 +542,7 @@ html {
   content: "";
   z-index: -5;
   position: absolute;
-  top: 80%;
+  top: 50%;
   left: 30%;
   width: 150px;
   height: 150px;
@@ -550,23 +550,25 @@ html {
   border-radius: 75px;
   background-color: #2781DB;
   filter: blur(130px);
+  -webkit-filter: blur(130px);
+  -moz-filter: blur(130px);
 }
-
-.shadows-works {
-  position: relative;
-}
-.shadows-works::after {
-  content: "";
-  z-index: -5;
-  position: absolute;
-  top: 16%;
-  left: 18%;
-  width: 150px;
-  height: 150px;
-  border: 0;
-  border-radius: 75px;
-  background-color: #2781DB;
-  filter: blur(130px);
+@media screen and (max-width: 540px) {
+  .shadows-hero::after {
+    content: "";
+    z-index: -5;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    width: 96px;
+    height: 96px;
+    border: 0;
+    border-radius: 75px;
+    background-color: #2781DB;
+    filter: blur(80px);
+    -webkit-filter: blur(80px);
+    -moz-filter: blur(80px);
+  }
 }
 
 .card-works {
@@ -739,6 +741,8 @@ html {
   border-radius: 75px;
   background-color: #2781DB;
   filter: blur(130px);
+  -webkit-filter: blur(130px);
+  -moz-filter: blur(130px);
 }
 @media screen and (max-width: 960px) {
   .about-shadow::after {
@@ -753,6 +757,8 @@ html {
     border-radius: 75px;
     background-color: #2781DB;
     filter: blur(130px);
+    -webkit-filter: blur(130px);
+    -moz-filter: blur(130px);
   }
 }
 @media screen and (max-width: 540px) {
@@ -760,14 +766,16 @@ html {
     content: "";
     z-index: -5;
     position: absolute;
-    top: 15%;
+    top: 20%;
     left: 10%;
     width: 96px;
     height: 96px;
     border: 0;
     border-radius: 75px;
     background-color: #2781DB;
-    filter: blur(70px);
+    filter: blur(80px);
+    -webkit-filter: blur(80px);
+    -moz-filter: blur(80px);
   }
 }
 
@@ -788,6 +796,7 @@ html {
   .profile {
     width: 200px;
     height: 200px;
+    border: 6px solid transparent;
   }
 }
 
@@ -823,12 +832,16 @@ html {
   border-radius: 75px;
   background-color: #2781DB;
   filter: blur(130px);
+  -webkit-filter: blur(130px);
+  -moz-filter: blur(130px);
 }
 @media screen and (max-width: 540px) {
   .shadows-contact::after {
     width: 75px;
     height: 75px;
-    filter: blur(96px);
+    filter: blur(80px);
+    -webkit-filter: blur(80px);
+    -moz-filter: blur(80px);
   }
 }
 
@@ -1409,87 +1422,51 @@ p {
 }
 
 .m-0 {
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-left: 0;
-  margin-right: 0;
+  margin: 0;
 }
 
 .m-1 {
-  margin-top: 8px;
-  margin-bottom: 8px;
-  margin-left: 8px;
-  margin-right: 8px;
+  margin: 8px;
 }
 
 .m-2 {
-  margin-top: 16px;
-  margin-bottom: 16px;
-  margin-left: 16px;
-  margin-right: 16px;
+  margin: 16px;
 }
 
 .m-3 {
-  margin-top: 24px;
-  margin-bottom: 24px;
-  margin-left: 24px;
-  margin-right: 24px;
+  margin: 24px;
 }
 
 .m-4 {
-  margin-top: 32px;
-  margin-bottom: 32px;
-  margin-left: 32px;
-  margin-right: 32px;
+  margin: 32px;
 }
 
 .m-5 {
-  margin-top: 36px;
-  margin-bottom: 36px;
-  margin-left: 36px;
-  margin-right: 36px;
+  margin: 36px;
 }
 
 .m-6 {
-  margin-top: 40px;
-  margin-bottom: 40px;
-  margin-left: 40px;
-  margin-right: 40px;
+  margin: 40px;
 }
 
 .m-7 {
-  margin-top: 48px;
-  margin-bottom: 48px;
-  margin-left: 48px;
-  margin-right: 48px;
+  margin: 48px;
 }
 
 .m-8 {
-  margin-top: 56px;
-  margin-bottom: 56px;
-  margin-left: 56px;
-  margin-right: 56px;
+  margin: 56px;
 }
 
 .m-9 {
-  margin-top: 72px;
-  margin-bottom: 72px;
-  margin-left: 72px;
-  margin-right: 72px;
+  margin: 72px;
 }
 
 .m-10 {
-  margin-top: 96px;
-  margin-bottom: 96px;
-  margin-left: 96px;
-  margin-right: 96px;
+  margin: 96px;
 }
 
 .m-11 {
-  margin-top: 120px;
-  margin-bottom: 120px;
-  margin-left: 120px;
-  margin-right: 120px;
+  margin: 120px;
 }
 
 .pt-0 {
@@ -1805,87 +1782,51 @@ p {
 }
 
 .p-0 {
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
+  padding: 0;
 }
 
 .p-1 {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding: 8px;
 }
 
 .p-2 {
-  padding-top: 16px;
-  padding-bottom: 16px;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding: 16px;
 }
 
 .p-3 {
-  padding-top: 24px;
-  padding-bottom: 24px;
-  padding-left: 24px;
-  padding-right: 24px;
+  padding: 24px;
 }
 
 .p-4 {
-  padding-top: 32px;
-  padding-bottom: 32px;
-  padding-left: 32px;
-  padding-right: 32px;
+  padding: 32px;
 }
 
 .p-5 {
-  padding-top: 36px;
-  padding-bottom: 36px;
-  padding-left: 36px;
-  padding-right: 36px;
+  padding: 36px;
 }
 
 .p-6 {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding: 40px;
 }
 
 .p-7 {
-  padding-top: 48px;
-  padding-bottom: 48px;
-  padding-left: 48px;
-  padding-right: 48px;
+  padding: 48px;
 }
 
 .p-8 {
-  padding-top: 56px;
-  padding-bottom: 56px;
-  padding-left: 56px;
-  padding-right: 56px;
+  padding: 56px;
 }
 
 .p-9 {
-  padding-top: 72px;
-  padding-bottom: 72px;
-  padding-left: 72px;
-  padding-right: 72px;
+  padding: 72px;
 }
 
 .p-10 {
-  padding-top: 96px;
-  padding-bottom: 96px;
-  padding-left: 96px;
-  padding-right: 96px;
+  padding: 96px;
 }
 
 .p-11 {
-  padding-top: 120px;
-  padding-bottom: 120px;
-  padding-left: 120px;
-  padding-right: 120px;
+  padding: 120px;
 }
 
 svg {
@@ -2238,24 +2179,24 @@ header {
   transform-box: fill-box;
   transform-origin: center center;
   animation: circle-hero-move 20s ease infinite alternate;
-  filter: blur(12px);
   -moz-filter: blur(12px);
+  filter: blur(12px);
 }
 
 .circle-hero-2 {
   transform-box: fill-box;
   transform-origin: center center;
   animation: circle-hero-move 20s ease 0.5s infinite alternate;
-  filter: blur(12px);
   -moz-filter: blur(12px);
+  filter: blur(12px);
 }
 
 .circle-hero-3 {
   transform-box: fill-box;
   transform-origin: center center;
   animation: circle-hero-move 20s ease 1s infinite alternate;
-  filter: blur(12px);
   -moz-filter: blur(12px);
+  filter: blur(12px);
 }
 
 @keyframes circle-hero-move {
@@ -2279,8 +2220,8 @@ header {
   transform-box: fill-box;
   transform-origin: center center;
   animation: square-1-rotate 16s 0.5s ease infinite alternate;
-  filter: blur(12px);
   -moz-filter: blur(12px);
+  filter: blur(12px);
 }
 
 @keyframes square-1-rotate {
@@ -2295,8 +2236,8 @@ header {
   transform-box: fill-box;
   transform-origin: center center;
   animation: square-2-rotate 16s 1s ease infinite alternate;
-  filter: blur(12px);
   -moz-filter: blur(12px);
+  filter: blur(12px);
 }
 
 @keyframes square-2-rotate {
@@ -2311,8 +2252,8 @@ header {
   transform-box: fill-box;
   transform-origin: center center;
   animation: square-3-rotate 16s 1.5s ease infinite alternate;
-  filter: blur(12px);
   -moz-filter: blur(12px);
+  filter: blur(12px);
 }
 
 @keyframes square-3-rotate {
@@ -2327,8 +2268,8 @@ header {
   transform-box: fill-box;
   transform-origin: center center;
   animation: square-4-rotate 16s 2s ease infinite alternate;
-  filter: blur(12px);
   -moz-filter: blur(12px);
+  filter: blur(12px);
 }
 
 @keyframes square-4-rotate {

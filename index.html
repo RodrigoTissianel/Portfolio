@@ -72,9 +72,9 @@
         ===========  SECTION HERO ============
         ====================================== -->
      <main>
-        <section class="container" id="hero">
+        <section class="container shadows-hero" id="hero">
             <div class="row mt-8">
-                <div class="grid-6 greeting shadows-hero">
+                <div class="grid-6 greeting">
                     <h5 class="text-gradient">HEY! I'M</h5>
                     <h1 class="name my-2 h0">Rodrigo</h1>
                     <h1 class="surname ml-11 h0">Tissianel</h1>
@@ -215,6 +215,7 @@
                     </div>
                 </div>
             </div>
+        </div>
     </section>
 
      <!--======================================
@@ -237,14 +238,12 @@
                     </div>
                 </div>
                 
-                <div class="row ">
-                    <div class="grid-2 p-0 ">
-                        <a href="https://github.com/RodrigoTissianel" target="_blank" class="p-2">
-                            <img src="svg/icon-github.svg" alt="Github icon" onAddload="SVGInject(this)">
+                <div class="row">
+                    <div class="grid-nobreak12 p-0 flex-start">
+                        <a href="https://github.com/RodrigoTissianel" target="_blank" class="mr-2 p-2">
+                            <img src="svg/icon-github.svg" alt="Github icon" onload="SVGInject(this)">
                         </a>
-                    </div>
 
-                    <div class="grid-2 p-0 ">
                         <a href="https://www.linkedin.com/in/rodrigo-tissianel-62780112a/" target="_blank" class="p-2">
                             <img src="svg/icon-linkedin.svg" alt="LinkedIn icon" onload="SVGInject(this)">
                         </a>
@@ -441,3 +440,6 @@
 
 </body>
 </html>
+
+
+<!-- ver pq não pega o blur no shadow hero e nem nos svgs no Safari ou IOS -->

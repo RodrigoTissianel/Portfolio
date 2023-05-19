@@ -359,7 +359,7 @@ $gutter: 24px;
     content: '';
     z-index: -5;
     position: absolute;
-    top: 80%;
+    top: 50%;
     left: 30%;
     width: 150px;
     height: 150px;
@@ -367,31 +367,33 @@ $gutter: 24px;
     border-radius: 75px;
     background-color: $primary-normal;
     filter: blur(130px);
+    -webkit-filter: blur(130px);
+    -moz-filter: blur(130px);
+  }
+
+  @include responsive(xxs){
+    
+    &::after{
+      content: '';
+      z-index: -5;
+      position: absolute;
+      top: 35%;
+      left: 50%;
+      width: 96px;
+      height: 96px;
+      border: 0;
+      border-radius: 75px;
+      background-color: $primary-normal;
+      filter: blur(80px);
+      -webkit-filter: blur(80px);
+      -moz-filter: blur(80px);
+    }
   }
 }
 
 // ======================================
 // =========== SECTION WORKS ============
 // ======================================
-.shadows-works{
-  position: relative;
-
-  &::after{
-    content: '';
-    z-index: -5;
-    position: absolute;
-    top: 16%;
-    left: 18%;
-    width: 150px;
-    height: 150px;
-    border: 0;
-    border-radius: 75px;
-    background-color: $primary-normal;
-    filter: blur(130px);
-  }
-
-}
-
 .card-works{
   width: 100%;
   height: 525px;
@@ -476,7 +478,6 @@ $gutter: 24px;
   }
 }
 
-
 .blog-page {
   width: 988px;
   height: 556px;
@@ -553,12 +554,9 @@ $gutter: 24px;
   }
 }
 
-
 // ======================================
 // =========== SECTION ABOUT ============
 // ======================================
-
-
 .about-shadow{
   position: relative;
   
@@ -574,6 +572,8 @@ $gutter: 24px;
     border-radius: 75px;
     background-color: $primary-normal;
     filter: blur(130px);
+    -webkit-filter: blur(130px);
+    -moz-filter: blur(130px);
   }
 
   @include responsive(s){
@@ -589,6 +589,8 @@ $gutter: 24px;
       border-radius: 75px;
       background-color: $primary-normal;
       filter: blur(130px);
+      -webkit-filter: blur(130px);
+      -moz-filter: blur(130px);
     }
   }
 
@@ -598,19 +600,20 @@ $gutter: 24px;
       content: '';
       z-index: -5;
       position: absolute;
-      top: 15%;
+      top: 20%;
       left: 10%;
       width: 96px;
       height: 96px;
       border: 0;
       border-radius: 75px;
       background-color: $primary-normal;
-      filter: blur(70px);
+      filter: blur(80px);
+      -webkit-filter: blur(80px);
+      -moz-filter: blur(80px);
     }
   }
   
 }
-
 
 .profile{
 width: 300px;
@@ -626,6 +629,7 @@ border: 8px solid transparent;
   @include responsive(xxs){
     width: 200px;
     height: 200px;
+    border: 6px solid transparent;
   }
 }
 
@@ -665,6 +669,8 @@ border: 8px solid transparent;
     border-radius: 75px;
     background-color: $primary-normal;
     filter: blur(130px);
+    -webkit-filter: blur(130px);
+    -moz-filter: blur(130px);
   }
 
   @include responsive(xxs){
@@ -672,7 +678,9 @@ border: 8px solid transparent;
     &::after{
       width: 75px;
       height: 75px;
-      filter: blur(96px);
+      filter: blur(80px);
+      -webkit-filter: blur(80px);
+      -moz-filter: blur(80px);
     }
 
   }
