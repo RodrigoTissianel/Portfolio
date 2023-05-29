@@ -36,5 +36,5 @@ ao salvar o projeto.
 ## 🚀 Contribuição
 
 1. Veja mais projetos gratuitos no GitHub (<https://github.com/RodrigoTissianel>)
-2. Veja alguns outros projetos no meu portfólio (<https://nyousefali.com.br>)
+2. Veja alguns outros projetos no meu portfólio (<https://rodrigotissianel.com.br>)
 3. Muito obrigado por estar aqui!
