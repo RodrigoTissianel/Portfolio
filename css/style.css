@@ -588,7 +588,7 @@ html {
 @media screen and (max-width: 540px) {
   .card-works {
     height: 820px;
-    padding: 24px 24px 24px 24px;
+    padding: 24px;
   }
 }
 
@@ -598,111 +598,56 @@ html {
   }
 }
 
-.nubank-page {
+.works-pages {
   width: 988px;
   height: 556px;
   border-radius: 16px;
   transition: 0.7s ease;
-  box-shadow: -2px 2px 16px 8px rgba(113, 114, 116, 0.2);
+  box-shadow: -2px 2px 16px 4px rgba(113, 114, 116, 0.1);
 }
-.nubank-page:hover {
+.works-pages:hover {
   width: 624px;
   height: 351px;
   border-radius: 8px;
 }
 @media screen and (max-width: 1440px) and (min-width: 1140px) {
-  .nubank-page {
+  .works-pages {
     width: 876px;
     height: 492px;
   }
-  .nubank-page:hover {
+  .works-pages:hover {
     width: 542px;
     height: 306px;
   }
 }
 @media screen and (max-width: 1140px) and (min-width: 960px) {
-  .nubank-page {
+  .works-pages {
     width: 800px;
     height: 450px;
   }
-  .nubank-page:hover {
+  .works-pages:hover {
     width: 460px;
     height: 259px;
   }
 }
 @media screen and (max-width: 960px) {
-  .nubank-page:hover {
+  .works-pages:hover {
     width: 590px;
     height: 332px;
   }
 }
 @media screen and (max-width: 768px) {
-  .nubank-page:hover {
+  .works-pages:hover {
     width: 560px;
     height: 315px;
   }
 }
 @media screen and (max-width: 540px) {
-  .nubank-page {
-    width: 432px;
-    height: 243px;
-  }
-  .nubank-page:hover {
-    width: 110%;
-    height: 100%;
-  }
-}
-
-.blog-page {
-  width: 988px;
-  height: 556px;
-  border-radius: 16px;
-  transition: 0.7s ease;
-  box-shadow: -2px 2px 24px 4px rgba(113, 114, 116, 0.2);
-}
-.blog-page:hover {
-  width: 624px;
-  height: 351px;
-  border-radius: 8px;
-}
-@media screen and (max-width: 1440px) and (min-width: 1140px) {
-  .blog-page {
-    width: 876px;
-    height: 492px;
-  }
-  .blog-page:hover {
-    width: 542px;
-    height: 306px;
-  }
-}
-@media screen and (max-width: 1140px) and (min-width: 960px) {
-  .blog-page {
-    width: 800px;
-    height: 450px;
-  }
-  .blog-page:hover {
-    width: 460px;
-    height: 259px;
-  }
-}
-@media screen and (max-width: 960px) {
-  .blog-page:hover {
-    width: 590px;
-    height: 332px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .blog-page:hover {
+  .works-pages {
     width: 560px;
     height: 315px;
   }
-}
-@media screen and (max-width: 540px) {
-  .blog-page {
-    width: 432px;
-    height: 243px;
-  }
-  .blog-page:hover {
+  .works-pages:hover {
     width: 110%;
     height: 100%;
   }
