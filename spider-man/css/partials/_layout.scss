@@ -1,0 +1,82 @@
+
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 36px 16px;
+    height: 85vh;
+    overflow: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    @include responsive(){
+        flex-direction: row;
+        height: auto;
+        overflow: hidden;
+    }
+}
+
+.container-item-1{
+    max-width: 576px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.spiderman{
+    width: 150%;
+    transform: translate3d(-170px,0,0);
+
+    @include responsive(){
+        width: 100%;
+        transform: translate3d(0,0,0);
+    }
+}
+
+.flex{
+    display: flex;
+}
+.align-items-center{
+    align-items: center;
+}
+.w-auto{
+    width: auto;
+}
+
+.bg-video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::after{
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: linear-gradient(101.47deg, #0A0C10 26.38%, rgba(10, 12, 16, 0.8) 50.7%, #0A0C10 73.17%);
+    }
+}
+
+.bg-loader{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(225deg, $red 0%, $red-dark 100%);
+    overflow: hidden;
+}
