@@ -12,68 +12,60 @@ $container-s: 768px;
 $container-xs: 540px;
 $gutter: 24px;
 
-
-@mixin responsive($device){
-
-    @if $device == xl{
+@mixin responsive($device) {
+    @if $device == xl {
         //For resolutions above 1440px
-        @media screen and (min-width: $container-xl){
+        @media screen and (min-width: $container-xl) {
             @content;
         }
-    }
-    @else if $device == l{
+    } @else if $device == l {
         //For resolutions between 1140px and 1400px
-        @media screen and (max-width: $container-xl) and (min-width:$container-l){
+        @media screen and (max-width: $container-xl) and (min-width: $container-l) {
             @content;
         }
-    }
-    @else if $device == m{
+    } @else if $device == m {
         //For resolutions between 960px and 1140px
-        @media screen and (max-width: $container-l) and (min-width:$container-m){
+        @media screen and (max-width: $container-l) and (min-width: $container-m) {
             @content;
         }
-    }
-    @else if $device == s{
+    } @else if $device == s {
         //For resolutions below 960px
-        @media screen and (max-width: $container-m){
+        @media screen and (max-width: $container-m) {
             @content;
         }
-    }
-    @else if $device == xs{
+    } @else if $device == xs {
         //For resolutions below 768px
-        @media screen and (max-width: $container-s){
+        @media screen and (max-width: $container-s) {
             @content;
         }
-    }
-    @else if $device == xxs{
+    } @else if $device == xxs {
         //For resolutions below 540px
-        @media screen and (max-width: $container-xs){
+        @media screen and (max-width: $container-xs) {
             @content;
         }
     }
 }
 
-
-@function grid($col, $total: 12){
+@function grid($col, $total: 12) {
     @return ($col/$total) * 100%;
 }
 
-@for $i from 1 through 12{
-    .grid-#{$i}{
+@for $i from 1 through 12 {
+    .grid-#{$i} {
         width: calc(#{grid($i)} - #{$gutter});
         margin: $gutter/2;
         padding: 16px 0;
         float: left;
 
-        @include responsive(s){
+        @include responsive(s) {
             width: calc(100% - #{$gutter});
             float: none;
         }
     }
 }
 
-@for $i from 1 to 13{
-    .grid-nobreak#{$i}{
+@for $i from 1 to 13 {
+    .grid-nobreak#{$i} {
         width: calc(#{grid($i)} - #{$gutter});
         margin: $gutter/2;
         padding: 16px 0;
@@ -81,8 +73,7 @@ $gutter: 24px;
     }
 }
 
-
-.container{
+.container {
     max-width: $container-xl;
     margin: 0 auto;
     padding: 96px 24px;
@@ -90,588 +81,577 @@ $gutter: 24px;
     overflow: hidden;
 
     //clear fix
-    &::after{
-        content: '';
+    &::after {
+        content: "";
         display: table;
         clear: both;
     }
 
- 
-    
-    @include responsive(s){
+    @include responsive(s) {
         flex-direction: column;
         padding: 64px 48px;
     }
 }
 
-.visible{
-  overflow: visible;
+.visible {
+    overflow: visible;
 }
 
-.br-responsive{
-  display: none;
-  
-  @include responsive(m){
-    display: block;
-  }
-  @include responsive(s){
-    display: inline;
-  }
+.br-responsive {
+    display: none;
+
+    @include responsive(m) {
+        display: block;
+    }
+    @include responsive(s) {
+        display: inline;
+    }
 }
 
-.disappear{
-    @include responsive(m){
-      display: block;
+.disappear {
+    @include responsive(m) {
+        display: block;
     }
-    @include responsive(s){
-      display: none;
+    @include responsive(s) {
+        display: none;
     }
-  }
+}
 
-  .disappear-mobile{
-    @include responsive(xxs){
-      display: none;
+.disappear-mobile {
+    @include responsive(xxs) {
+        display: none;
     }
-  }
+}
 
-  .text-nobreak{
+.text-nobreak {
     white-space: nowrap;
-  }
-  
-  .row{
-    // clearfix
-    &::after{
-      content: '';
-      display: table;
-      clear: both;
-    }
-  }
-  
-  .h-100{
-    height: 100vh;
-  }
-  
-  .h-100p{
-    height: 100%;
-  }
-  
-  .relative {
-    position: relative;
-  }
+}
 
-  //Display flex
-  .flex  {
+.row {
+    // clearfix
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+.h-100 {
+    height: 100vh;
+}
+
+.h-100p {
+    height: 100%;
+}
+
+.relative {
+    position: relative;
+}
+
+//Display flex
+.flex {
     display: flex;
-  }
-  .flex-start-top{
+}
+.flex-start-top {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: row;
-  }
-  .flex-start {
+}
+.flex-start {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-  }
-  .flex-end {
+}
+.flex-end {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-  }
+}
 
-  .flex-start-column {
+.flex-start-column {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-  }
-  .flex-end-column {
+}
+.flex-end-column {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     flex-direction: column;
-  }
-  
-  .flex-center {
+}
+
+.flex-center {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .flex-center-column {
+}
+
+.flex-center-column {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-  }
-  
-  .flex-space {
+}
+
+.flex-space {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-  }
-  .flex-space-column {
+}
+.flex-space-column {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-  }
-  .flex-around{
+}
+.flex-around {
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
-  }
-  
-  .flex-column {
+}
+
+.flex-column {
     flex-direction: column;
-  }
+}
 
-  .column-responsive{   
-    @include responsive(m){
-      flex-direction: column;
+.column-responsive {
+    @include responsive(m) {
+        flex-direction: column;
     }
-    @include responsive(xxs){
-      flex-direction: column;
+    @include responsive(xxs) {
+        flex-direction: column;
     }
-  }
-  
-  .flex-wrap {
+}
+
+.flex-wrap {
     flex-wrap: wrap;
-  }
-  
-  .flex-item-1 {
-    flex: 1 1 360px;
-  }
-  
-  .flex-item-2 {
-    flex: 2 1 360px;
-  }
-  
-  .flex-item-3 {
-    flex: 3 1 360px;
-  }
-  
-  .flex-item-4 {
-    flex: 4 1 360px;
-  }
-  
-  .flex-item-5 {
-    flex: 5 1 360px;
-  }
-  
-  .flex-auto {
-    flex: 1 1 auto;
-  }
-  
-  // Width's
-  .w-auto {
-    width: auto;
-  }
-  .h-auto {
-    height: auto !important;
-  }
-  .h-100{
-    height: 100%;
-  }
-  .h-80{
-    height: 80%;
-  }
-  .h-50{
-    height: 50%;
-  }
-  .w-100 {
-    width: 100%;
-  }
-  .w-75 {
-    width: 75%;
-  }
-  .w-50 {
-    width: 50%;
-  }
-  .w-25 {
-    width: 25%;
-  }
-  
-  // Borders
-  .bb-black{
-    border-bottom: 1px solid $black-light;
-  }
-  
-  .bt-black{
-    border-top: 1px solid $black-light;
-  }
-  
-  .bl-black{
-    border-left: 1px solid $black-light;
-  }
-  
-  .br-black{
-    border-right: 1px solid $black-light;
-  }
-  
-  
-  .bg-gray{
-    background-color: $black-normal;
-  }
-  
-  .bb-gray{
-    border-bottom: 2px solid $black-normal;
-  }
-  
-  .bt-gray{
-    border-top: 2px solid $black-normal;
-  }
-  
-  .bl-gray{
-    border-left: 2px solid $black-normal;
-  }
-  
-  .br-gray{
-    border-right: 2px solid $black-normal;
-  }
+}
 
-  
+.flex-item-1 {
+    flex: 1 1 360px;
+}
+
+.flex-item-2 {
+    flex: 2 1 360px;
+}
+
+.flex-item-3 {
+    flex: 3 1 360px;
+}
+
+.flex-item-4 {
+    flex: 4 1 360px;
+}
+
+.flex-item-5 {
+    flex: 5 1 360px;
+}
+
+.flex-auto {
+    flex: 1 1 auto;
+}
+
+// Width's
+.w-auto {
+    width: auto;
+}
+.h-auto {
+    height: auto !important;
+}
+.h-100 {
+    height: 100%;
+}
+.h-80 {
+    height: 80%;
+}
+.h-50 {
+    height: 50%;
+}
+.w-100 {
+    width: 100%;
+}
+.w-75 {
+    width: 75%;
+}
+.w-50 {
+    width: 50%;
+}
+.w-25 {
+    width: 25%;
+}
+
+// Borders
+.bb-black {
+    border-bottom: 1px solid $black-light;
+}
+
+.bt-black {
+    border-top: 1px solid $black-light;
+}
+
+.bl-black {
+    border-left: 1px solid $black-light;
+}
+
+.br-black {
+    border-right: 1px solid $black-light;
+}
+
+.bg-gray {
+    background-color: $black-normal;
+}
+
+.bb-gray {
+    border-bottom: 2px solid $black-normal;
+}
+
+.bt-gray {
+    border-top: 2px solid $black-normal;
+}
+
+.bl-gray {
+    border-left: 2px solid $black-normal;
+}
+
+.br-gray {
+    border-right: 2px solid $black-normal;
+}
+
 // ======================================
 // ============ INTRODUCTION ============
 // ======================================
 .introduction {
-  width: 100%;
-  height: 100vh;
-  background-color: $black-dark;
-  position: fixed;
-  z-index: 999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background-color: $black-dark;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 // ======================================
 // ============ SECTION HERO ============
 // ======================================
-.shadows-hero{
-  position: relative;
+.shadows-hero {
+    position: relative;
 
-  &::after{
-    content: '';
-    z-index: -5;
-    position: absolute;
-    top: 50%;
-    left: 30%;
-    width: 150px;
-    height: 150px;
-    border: 0;
-    border-radius: 75px;
-    background-color: $primary-normal;
-    filter: blur(130px);
-    -webkit-filter: blur(130px);
-    -moz-filter: blur(130px);
-  }
-
-  @include responsive(xxs){
-    
-    &::after{
-      content: '';
-      z-index: -5;
-      position: absolute;
-      top: 35%;
-      left: 50%;
-      width: 96px;
-      height: 96px;
-      border: 0;
-      border-radius: 75px;
-      background-color: $primary-normal;
-      filter: blur(80px);
-      -webkit-filter: blur(80px);
-      -moz-filter: blur(80px);
+    &::after {
+        content: "";
+        z-index: -5;
+        position: absolute;
+        top: 50%;
+        left: 30%;
+        width: 150px;
+        height: 150px;
+        border: 0;
+        border-radius: 75px;
+        background-color: $primary-normal;
+        filter: blur(130px);
+        -webkit-filter: blur(130px);
+        -moz-filter: blur(130px);
     }
-  }
+
+    @include responsive(xxs) {
+        &::after {
+            content: "";
+            z-index: -5;
+            position: absolute;
+            top: 35%;
+            left: 50%;
+            width: 96px;
+            height: 96px;
+            border: 0;
+            border-radius: 75px;
+            background-color: $primary-normal;
+            filter: blur(80px);
+            -webkit-filter: blur(80px);
+            -moz-filter: blur(80px);
+        }
+    }
 }
 
 // ======================================
 // =========== SECTION WORKS ============
 // ======================================
-.card-works{
-  width: 100%;
-  height: 525px;
-  padding: 40px 0px 40px 40px;
-  background-color: $black-normal;
-  border: 2px solid $grey-1;
-  border-radius: 16px;
-  overflow: hidden;
+.card-works {
+    width: 100%;
+    height: 525px;
+    padding: 40px 0px 40px 40px;
+    background-color: $black-normal;
+    border: 2px solid $grey-1;
+    border-radius: 16px;
+    overflow: hidden;
 
-  @include responsive(s){
-    height: 882px;
-  }
+    @include responsive(s) {
+        height: 882px;
+    }
 
-  @include responsive(xxs){
-    height: 820px;
-    padding: 24px;
-  }
-}   
-
-.blog-card{
-
-  @include responsive(xxs){
-    height: 900px;
-  }
+    @include responsive(xxs) {
+        height: 820px;
+        padding: 24px;
+    }
 }
 
-.works-pages{
-  width: 988px;
-  height: 556px;
-  border-radius: 16px;
-  transition: .7s ease;
-  box-shadow: -2px 2px 16px 4px rgba(113,114,116,.1);
-
-  &:hover{
-    width: 624px;
-    height: 351px;
-    border-radius: 8px;
-  }
-
-  @include responsive(l){
-    width: 876px;
-    height: 492px;
-
-    &:hover{
-      width: 542px;
-      height: 306px;
+.blog-card {
+    @include responsive(xxs) {
+        height: 900px;
     }
-  }                                             
-
-  @include responsive(m){
-    width: 800px;
-    height: 450px;
-
-    &:hover{
-      width: 460px;
-      height: 259px;
-    }
-  }
-
-  @include responsive(s){
-    &:hover{
-      width: 590px;
-      height: 332px;
-    }
-  }
-
-  @include responsive(xs){
-    &:hover{
-      width: 560px;
-      height: 315px;
-    }
-  }
-  
-  @include responsive(xxs){
-    width: 560px;
-    height: 315px;
-
-    &:hover{
-      width: 110%;
-      height: 100%;
-    }
-  }
 }
 
-.subtitle-desktop{
-  display: inline;
+.works-pages {
+    width: 988px;
+    height: 556px;
+    border-radius: 16px;
+    transition: 0.7s ease;
+    box-shadow: -2px 2px 16px 4px rgba(113, 114, 116, 0.1);
 
-  @include responsive(s){
-    display: none;
-  }
+    &:hover {
+        width: 624px;
+        height: 351px;
+        border-radius: 8px;
+    }
+
+    @include responsive(l) {
+        width: 876px;
+        height: 492px;
+
+        &:hover {
+            width: 542px;
+            height: 306px;
+        }
+    }
+
+    @include responsive(m) {
+        width: 800px;
+        height: 450px;
+
+        &:hover {
+            width: 460px;
+            height: 259px;
+        }
+    }
+
+    @include responsive(s) {
+        &:hover {
+            width: 620px;
+            height: 348px;
+        }
+    }
+
+    @include responsive(xs) {
+        width: 876px;
+        height: 492px;
+        &:hover {
+            width: 620px;
+            height: 348px;
+        }
+    }
+
+    @include responsive(xxs) {
+        width: 560px;
+        height: 315px;
+
+        &:hover {
+            width: 110%;
+            height: 100%;
+        }
+    }
 }
 
-.subtitle-mobile{
-  display: none;
-
-  @include responsive(s){
+.subtitle-desktop {
     display: inline;
-  }
+
+    @include responsive(s) {
+        display: none;
+    }
+}
+
+.subtitle-mobile {
+    display: none;
+
+    @include responsive(s) {
+        display: inline;
+    }
 }
 
 // ======================================
 // =========== SECTION ABOUT ============
 // ======================================
-.about-shadow{
-  position: relative;
-  
-  &::after{
-    content: '';
-    z-index: -5;
-    position: absolute;
-    top: 45%;
-    left: 70%;
-    width: 150px;
-    height: 150px;
-    border: 0;
-    border-radius: 75px;
-    background-color: $primary-normal;
-    filter: blur(130px);
-    -webkit-filter: blur(130px);
-    -moz-filter: blur(130px);
-  }
+.about-shadow {
+    position: relative;
 
-  @include responsive(s){
-    &::after{
-      content: '';
-      z-index: -5;
-      position: absolute;
-      top: 25%;
-      left: 25%;
-      width: 150px;
-      height: 150px;
-      border: 0;
-      border-radius: 75px;
-      background-color: $primary-normal;
-      filter: blur(130px);
-      -webkit-filter: blur(130px);
-      -moz-filter: blur(130px);
+    &::after {
+        content: "";
+        z-index: -5;
+        position: absolute;
+        top: 45%;
+        left: 70%;
+        width: 150px;
+        height: 150px;
+        border: 0;
+        border-radius: 75px;
+        background-color: $primary-normal;
+        filter: blur(130px);
+        -webkit-filter: blur(130px);
+        -moz-filter: blur(130px);
     }
-  }
 
-  @include responsive(xxs){
-    
-    &::after{
-      content: '';
-      z-index: -5;
-      position: absolute;
-      top: 20%;
-      left: 10%;
-      width: 96px;
-      height: 96px;
-      border: 0;
-      border-radius: 75px;
-      background-color: $primary-normal;
-      filter: blur(80px);
-      -webkit-filter: blur(80px);
-      -moz-filter: blur(80px);
+    @include responsive(s) {
+        &::after {
+            content: "";
+            z-index: -5;
+            position: absolute;
+            top: 25%;
+            left: 25%;
+            width: 150px;
+            height: 150px;
+            border: 0;
+            border-radius: 75px;
+            background-color: $primary-normal;
+            filter: blur(130px);
+            -webkit-filter: blur(130px);
+            -moz-filter: blur(130px);
+        }
     }
-  }
-  
+
+    @include responsive(xxs) {
+        &::after {
+            content: "";
+            z-index: -5;
+            position: absolute;
+            top: 20%;
+            left: 10%;
+            width: 96px;
+            height: 96px;
+            border: 0;
+            border-radius: 75px;
+            background-color: $primary-normal;
+            filter: blur(80px);
+            -webkit-filter: blur(80px);
+            -moz-filter: blur(80px);
+        }
+    }
 }
 
-.profile{
-width: 300px;
-height: 300px;
-border-radius: 50%;
-background: linear-gradient(57.1deg, #0C5FB2 1.38%, #7EB2E5 96.27%) border-box;
-border: 8px solid transparent;
+.profile {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: linear-gradient(57.1deg, #0c5fb2 1.38%, #7eb2e5 96.27%)
+        border-box;
+    border: 8px solid transparent;
 
-  @include responsive(l){
-    width: 256px;
-    height: 250px;
-  }
-  @include responsive(xxs){
-    width: 200px;
-    height: 200px;
-    border: 6px solid transparent;
-  }
+    @include responsive(l) {
+        width: 256px;
+        height: 250px;
+    }
+    @include responsive(xxs) {
+        width: 200px;
+        height: 200px;
+        border: 6px solid transparent;
+    }
 }
 
 .expertise-item,
-.other-skill-item{
-  list-style: none;
+.other-skill-item {
+    list-style: none;
 }
 
+.divider {
+    width: 3px;
+    height: 147px;
+    border-radius: 2px;
+    background: linear-gradient(180deg, #424344 0%, rgba(66, 67, 68, 0) 100%);
 
-.divider{
-  width: 3px;
-  height: 147px;
-  border-radius: 2px;
-  background: linear-gradient(180deg, #424344 0%, rgba(66, 67, 68, 0) 100%);
-
-  @include responsive(xxs){
-    height: 130px;
-  }
-
+    @include responsive(xxs) {
+        height: 130px;
+    }
 }
 
-// ====================================== 
+// ======================================
 // ========== SECTION CONTACT ===========
 // ======================================
-.shadows-contact{
-  position: relative;
+.shadows-contact {
+    position: relative;
 
-  &::after{
-    z-index: -5;
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 45%;
-    width: 150px;
-    height: 150px;
-    border: 0;
-    border-radius: 75px;
-    background-color: $primary-normal;
-    filter: blur(130px);
-    -webkit-filter: blur(130px);
-    -moz-filter: blur(130px);
-  }
-
-  @include responsive(xxs){
-
-    &::after{
-      width: 75px;
-      height: 75px;
-      filter: blur(80px);
-      -webkit-filter: blur(80px);
-      -moz-filter: blur(80px);
+    &::after {
+        z-index: -5;
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 45%;
+        width: 150px;
+        height: 150px;
+        border: 0;
+        border-radius: 75px;
+        background-color: $primary-normal;
+        filter: blur(130px);
+        -webkit-filter: blur(130px);
+        -moz-filter: blur(130px);
     }
 
-  }
+    @include responsive(xxs) {
+        &::after {
+            width: 75px;
+            height: 75px;
+            filter: blur(80px);
+            -webkit-filter: blur(80px);
+            -moz-filter: blur(80px);
+        }
+    }
 }
 
-.contact-background{
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
+.contact-background {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
 
-  @include responsive(m){
-    top: 100px;
-  }
-  @include responsive(s){
-    top: 140px;
-    left: -10%;
-    width: 120%;
-  }
-  @include responsive(xs){
-    top: 100px;
-    left: -15%;
-    width: 130%;
-  }
-  @include responsive(xxs){
-    top: 140px;
-    left: -20%;
-    width: 140%;
-  }
+    @include responsive(m) {
+        top: 100px;
+    }
+    @include responsive(s) {
+        top: 140px;
+        left: -10%;
+        width: 120%;
+    }
+    @include responsive(xs) {
+        top: 100px;
+        left: -15%;
+        width: 130%;
+    }
+    @include responsive(xxs) {
+        top: 140px;
+        left: -20%;
+        width: 140%;
+    }
 }
 
-.mail-container{
-  width: 100%;
-  height: 45vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.mail-container {
+    width: 100%;
+    height: 45vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-  @include responsive(xxs){
-    height: 35vh;
-  }
+    @include responsive(xxs) {
+        height: 35vh;
+    }
 }
 
-.glass{
-  width: 450px;
-  height: 100px;
-  border: 0;
-  border-radius: 12px;
-  background-color: transparent;
-  backdrop-filter: blur(8px);
+.glass {
+    width: 450px;
+    height: 100px;
+    border: 0;
+    border-radius: 12px;
+    background-color: transparent;
+    backdrop-filter: blur(8px);
 }
-
-
