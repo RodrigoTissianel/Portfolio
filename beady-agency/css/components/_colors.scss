@@ -1,0 +1,47 @@
+//Colors of the project
+
+//Branding colors
+$primary-normal: #6C40E9;
+$primary-dark: #4D2C6B;
+
+$secondary-normal: #28103E;
+
+//Base colors
+$white-normal: #FFFFFF;
+
+//Auxiliary-colors
+$yellow-neon: #CFFF11;
+$yellow-normal: #E9CE40;
+
+//Gray scale
+$gray-1: #333333;   //gray-1
+$gray-2: #D9D9D9;   //gray-square
+$gray-3: #F2F2F2;   //gray-6
+$gray-4: #B1B1B1;
+
+.neon-yellow{
+    color: $yellow-neon;
+}
+
+.color-yellow{
+    color: $yellow-normal;
+}
+
+.color-white{
+    color: $white-normal;
+}
+
+.gray-1{
+    color: $gray-1;
+}
+
+.gray-2{
+    color: $gray-2;
+}
+
+.gray-3{
+    color: $gray-3;
+}
+.gray-4{
+    color: $gray-4;
+}

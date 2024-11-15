@@ -1,0 +1,183 @@
+
+//=====================================================
+//============== INTRODUCTION ANIMATIONS ==============
+//=====================================================
+
+.logo-svg-intro{
+    animation: logo-intro-animation 5s  ease ;
+    transform-box: fill-box;
+}
+
+@keyframes logo-intro-animation{
+    0%{
+        stroke-dasharray: 1 100;
+        fill-opacity: 0;
+    }
+    50%{
+        stroke-dasharray: 100 0;
+        fill-opacity: 0;
+    }
+    100%{
+        stroke-dasharray: 100 0;
+        fill-opacity: 1;
+    }
+}
+
+
+.text-intro{
+    animation: name-intro-animation 2s 2s ease forwards;
+    opacity: 0;
+}
+
+.subtext-intro{
+    animation: name-intro-animation 2s 3s ease forwards;
+    opacity: 0;
+}
+
+@keyframes name-intro-animation{
+    0%{
+        opacity: 0;
+        
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+//=====================================================
+//================= HERO ANIMATIONS ===================
+//=====================================================
+.circle-hero-1{
+    transform-origin: center center;
+    transform-box: fill-box;
+    animation: circle-move 12s ease infinite alternate;
+
+    @include responsive(l){
+        animation: circle-move-l 12s ease infinite alternate;
+    }
+
+    @include responsive(s){
+        animation: circle-move-s 12s ease infinite alternate;
+    }
+
+    @include responsive(xs){
+        animation: circle-move-xs 12s ease infinite alternate;
+    }
+
+    @include responsive(xxs){
+        animation: circle-move-xxs 12s ease infinite alternate;
+    }
+}
+
+@keyframes circle-move{
+    0%{
+        transform: translate3d(0,0,0);
+    }
+    100%{
+        transform: translate3d(400px, 100px, 0) ;
+    }
+}
+
+@keyframes circle-move-l{
+    0%{
+        transform: translate3d(0,0,0);
+    }
+    100%{
+        transform: translate3d(400px, 80px, 0) ;
+    }
+}
+
+@keyframes circle-move-s{
+    0%{
+        transform: translate3d(0,0,0);
+    }
+    100%{
+        transform: translate3d(210px, 80px, 0) ;
+    }
+}
+
+@keyframes circle-move-xs{
+    0%{
+        transform: translate3d(0,0,0);
+    }
+    100%{
+        transform: translate3d(160px, 60px, 0) ;
+    }
+}
+
+@keyframes circle-move-xxs{
+    0%{
+        transform: translate3d(0,0,0);
+    }
+    100%{
+        transform: translate3d(100px, 50px, 0) ;
+    }
+}
+
+
+.circle-hero-2{
+    transform-origin: center center;
+    transform-box: fill-box;
+    animation: circle-move2 12s ease infinite alternate;
+
+    @include responsive(l){
+        animation: circle-move2-l 12s ease infinite alternate;
+    }
+    @include responsive(s){
+        animation: circle-move2-s 12s ease infinite alternate;
+    }
+
+    @include responsive(xs){
+        animation: circle-move2-xs 12s ease infinite alternate;
+    }
+
+    @include responsive(xxs){
+        animation: circle-move2-xxs 12s ease infinite alternate;
+    }
+}
+
+@keyframes circle-move2{
+    0%{
+        transform: translate3d(0,0,0);
+    }
+    100%{
+        transform: translate3d(-370px, -160px, 0) ;
+    }
+}
+
+
+@keyframes circle-move2-l{
+    0%{
+        transform: translate3d(0,0,0);
+    }
+    100%{
+        transform: translate3d(-400px, -50px, 0) ;
+    }
+}
+
+@keyframes circle-move2-s{
+    0%{
+        transform: translate3d(0,0,0);
+    }
+    100%{
+        transform: translate3d(-140px, -120px, 0) ;
+    }
+}
+
+@keyframes circle-move2-xs{
+    0%{
+        transform: translate3d(0,0,0);
+    }
+    100%{
+        transform: translate3d(-110px, -110px, 0) ;
+    }
+}
+
+@keyframes circle-move2-xxs{
+    0%{
+        transform: translate3d(0,0,0);
+    }
+    100%{
+        transform: translate3d(-70px, -40px, 0) ;
+    }
+}

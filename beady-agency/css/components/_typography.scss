@@ -1,0 +1,262 @@
+@mixin typeface-1($size, $device: desktop){
+    font-family: 'K2D', sans-serif;
+
+    //Text style Display-1 from figma on Desktop
+    @if $size == h1 and $device == desktop{
+        font-size: 96px;
+        line-height: 104.167%;
+    }
+
+    //Text style Headline-1 from figma on Mobile
+    @else if $size == h1 and $device == mobile{
+        font-size: 36px;
+        line-height: 133.333%
+    }
+}
+
+.display-2{
+    font-size: 96px;
+    line-height: 104.167%;
+    font-weight: 300;
+
+    @include responsive(s){
+        font-size: 36px;
+        line-height: 116.667%;
+        font-weight: 300;
+    }
+}
+
+//Text style display-1 on Desktop and display-3 on Mobile
+.display-3{
+    font-family: 'K2D', sans-serif;
+    font-size: 96px;
+    line-height: 104.167%;
+    font-weight: 800;
+
+    @include responsive(s){
+        font-family: 'Kanit', sans-serif;
+        font-size: 64px;
+        line-height: 125%;
+        font-weight: 500;
+        letter-spacing: -0.32px;
+    }
+}
+
+@mixin typeface-2 ($size, $device: desktop){
+    font-family: 'Kanit', sans-serif;
+
+    //Text style Title from figma on Desktop
+    @if $size == h2 and $device == desktop{
+        font-size: 64px;
+        line-height: 156.25%;
+    }
+
+    //Text style Sub-Title from figma on Mobile
+    @else if $size == h2 and $device == mobile{
+        font-size: 32px;
+        line-height: normal;
+    }
+
+    //Text style Sub-Title from figma on Desktop
+    @else if $size == h3 and $device == desktop{
+        font-size: 32px;
+        line-height: normal;
+    }
+
+    //Text style Sub-Title-2 from figma on Mobile
+    @else if $size == h3 and $device == mobile{
+        font-size: 20px;
+        line-height: normal;
+    }
+
+    //Text style Button-L from figma on Desktop
+    @else if $size == h4 and $device == desktop{
+        font-size: 32px;
+        line-height: normal;
+        letter-spacing: 7.36px;
+    }
+
+    //Text style Button-XS from figma on Mobile
+    @else if $size == h4 and $device == mobile{
+        font-size: 16px;
+        line-height: normal;
+        letter-spacing: 4.6px;
+    }
+
+    //Text style Button-S from figma on Desktop
+    @else if $size == h5 and $device == desktop{
+        font-size: 20px;
+        line-height: normal;
+        letter-spacing: 4.6px;
+    }
+
+    //Text style Button-XS from figma on Mobile
+    @else if $size == h5 and $device == mobile{
+        font-size: 16px;
+        line-height: normal;
+        letter-spacing: 3.68px;
+    }
+
+    //Text style Body-1 from figma on Desktop
+    @else if $size == p1 and $device == desktop{
+        font-size: 32px;
+        line-height: normal;
+        letter-spacing: 1.28px;
+    }
+
+    //Text style Body-1 from figma on Mobile
+    @else if $size == p1 and $device == mobile{
+        font-size: 16px;
+        line-height: normal;
+    }
+
+    //Text style Body-2 from figma on Desktop
+    @else if $size == p2 and $device == desktop{
+        font-size: 16px;
+        line-height: normal;
+    }
+
+    //Text style Body-2 from figma on Mobile
+    @else if $size == p2 and $device == mobile{
+        font-size: 16px;
+        line-height: normal;
+    }
+
+    //Text style Body-3 from figma on Desktop
+    @if $size == p3 and $device == desktop{
+        font-size: 16px;
+        line-height: normal;
+    }
+
+    //Text style Body-3 from figma on Mobile
+    @else if $size == p3 and $device == mobile{
+        font-size: 12px;
+        line-height: normal;
+    }
+}
+
+h1{
+    color: $white-normal;
+    
+    @include typeface-1(h1, desktop);
+    @include responsive(s){
+        @include typeface-1(h1, mobile);
+    };
+}
+
+h2{
+    color: $gray-1;
+
+    @include typeface-2(h2, desktop);
+    @include responsive(s){
+        @include typeface-2(h2, mobile);
+    };
+}
+
+h3{
+    color: $white-normal;
+
+    @include typeface-2(h3, desktop);
+    @include responsive(s){
+        @include typeface-2(h3, mobile);
+    };
+}
+
+h4{
+    color: $white-normal;
+
+    @include typeface-2(h4, desktop);
+    @include responsive(s){
+        @include typeface-2(h4, mobile);
+    }
+    
+}
+
+
+h5{
+    color: $white-normal;
+
+    @include typeface-2(h5, desktop);
+    @include responsive(s){
+        @include typeface-2(h5, mobile);
+    };
+}
+
+p{
+    color: $white-normal;
+    @include typeface-2(p2, desktop);
+    @include responsive(s){
+        @include typeface-2(p2, mobile);
+    };
+}
+
+.body-1{
+    color: $gray-3;
+
+    @include typeface-2(p1, desktop);
+    @include responsive(s){
+        @include typeface-2(p1, mobile);
+    }
+}
+
+//Text style Body-2 on Desktop and Sub-title-2 on Mobile
+.body-2{
+    @include typeface-2(p2, desktop);
+    font-weight: 400;
+
+    @include responsive(s) {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: normal;
+        text-align: center;
+        margin-top: 16px;
+    }
+}
+
+//Text style Body-2 on Desktop and Body-3 on Mobile
+.body-3{
+    color: $gray-3;
+
+    @include typeface-2(p3, desktop);
+    @include responsive(s){
+        @include typeface-2(p3, mobile);
+    }
+}
+
+//Text style Sub-title on Desktop and Sub-title on Mobile
+.subtitle{
+    font-size: 32px;
+    line-height: normal;
+    white-space: nowrap;
+    @include responsive(s){
+        white-space: normal;
+        font-size: 32px;
+        line-height: normal;
+    }
+}
+
+.weight-300{
+    font-weight: 300;
+}
+.weight-400{
+    font-weight: 400;
+}
+.weight-500{
+    font-weight: 500;
+}
+
+.weight-800{
+    font-weight: 800;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.text-center-responsive{
+    text-align: start;
+
+    @include responsive(xs){
+        text-align: center;
+    }
+}

@@ -1,0 +1,288 @@
+// ======================================
+// ============ SWIPER SLIDER ===========
+// ======================================
+
+// ============ PROJECTS SECTION SLIDER =========== //
+.swiper {
+    width: 100%;
+    height: 458px;
+    position: absolute;
+    cursor: grab ;
+  
+    &:active{
+      cursor: grabbing ;
+    }
+
+    @include responsive(s){
+      max-height: 330px;
+    }
+
+    @include responsive(xxs){
+      max-height: 262px;
+    }
+  }
+ 
+  .swiper-slide{
+    width: auto !important;
+
+    img{
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      z-index: -1;
+    }
+
+    @include responsive(l){
+      width: 50% !important;
+    }
+
+    @include responsive(s){
+      width: 50% !important;
+    }
+
+    @include responsive(xxs){
+      width: 100% !important;
+    }
+  }
+  
+  .project-slide{
+    max-width: 682px;
+    max-height: 458px;
+
+    @include responsive(xxs){
+      max-height: 262px;
+    }
+  }
+  
+
+  .slider-buttons-container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 64px;
+    margin-right: 120px;
+
+    &:nth-child(2){
+      margin-top: 44px;
+    }
+
+    @include responsive(s){
+      justify-content: center;
+      margin-top: 48px;
+      margin-right: 0px;
+
+      &:nth-child(2){
+        margin-top: 24px;
+      }
+    }
+
+    @include responsive(xxs){
+      justify-content: center;
+      margin-top: 24px;
+      margin-right: 0px;
+
+      &:nth-child(2){
+        margin-top: 24px;
+      }
+    }
+  }
+  
+  .prev{
+    cursor: pointer;
+    width: 142px;
+    height: 64px;
+    padding: 32px;
+    background-color: transparent;
+    border: 1px solid #F5F5F5;
+    border-radius: 40px;
+    position: relative;
+    transition: .5s ease;
+
+    @include responsive(xxs){
+      width: 90px;
+      height: 48px;
+      padding: 24px;
+    }
+  
+    &::after{
+        content: '';
+        width: 78px;
+        height: 30px;
+        position: absolute;
+        top: 50%;
+        right: -8px;
+        transform: translate(-50%, -50%) translate3d(0,0,0);
+        background-image: url('../svg/icon-arrow2.svg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: .5s ease;
+
+        @include responsive(xxs){
+          width: 52px;
+          height: 16px;
+          background-image: url('../svg/icon-arrow2-small.svg');
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          transform-origin: center center;
+          transform: translate3d(-50%,-50%,0);
+        }
+    }
+  
+    &:hover{
+      background-color: rgba(242, 242, 242, 0.46);
+      backdrop-filter: blur(4.5px);
+  
+      &::after{
+        transform: translate(-50%, -50%) translate3d(-8px,0,0);
+      }
+    }
+  }
+  
+  .next{
+    cursor: pointer;
+    width: 142px;
+    height: 64px;
+    padding: 32px;
+    background-color: transparent;
+    border: 1px solid #F5F5F5;
+    border-radius: 40px;
+    position: relative;
+    transition: .5s ease;
+
+    @include responsive(xxs){
+      width: 90px;
+      height: 48px;
+      padding: 24px;
+    }
+  
+    &::after{
+        content: '';
+        width: 78px;
+        height: 30px;
+        position: absolute;
+        top: 50%;
+        right: -8px;
+        transform: translate3d(-50%,-50%,0) rotate(180deg);
+        background-image: url('../svg/icon-arrow2.svg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: .5s ease;
+
+        @include responsive(xxs){
+          width: 52px;
+          height: 16px;
+          background-image: url('../svg/icon-arrow2-small.svg');
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          transform-origin: center center;
+          transform: translate3d(-50%,-50%,0) rotate(180deg);
+        }
+    }
+  
+    &:hover{
+      background-color: rgba(242, 242, 242, 0.46);
+      backdrop-filter: blur(4.5px);
+  
+      &::after{
+        transform: translate(-50%, -50%) translate3d(8px,0,0) rotate(180deg);
+      }
+    }
+
+    
+  }
+
+  .slider-text-container{
+    width: 100%;
+    padding: 28px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    z-index: 5;
+
+    @include responsive(xxs){
+      flex-direction: column-reverse;
+      align-items: flex-start;
+    }
+  }
+  
+  .slider-background{
+    height: 215px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+    background: linear-gradient(360deg, rgba(29, 29, 29, 0.73) 0%, rgba(249, 249, 249, 0.00) 100%);
+  }
+  
+  .slider-item-right{
+    display: inline-block;
+    cursor: pointer;
+    padding: 8px 20px;
+    border-radius: 40px;
+    border: 1px solid #F2F2F2;
+    transition: .5s ease;
+  
+    &:hover{
+      background-color: rgba(242, 242, 242, 0.46);
+    }
+
+    @include responsive(xxs){
+      margin-top: 14px;
+    }
+  }
+
+  // ============ TESTIMONIALS SECTION SLIDER =========== //
+  .testimonial-container{
+    max-width: 392px;
+    height: 476px;
+    border: 1px solid $white-normal;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    padding: 42px;
+    border-radius: 20px;
+
+    @include responsive(s){
+      max-width: 33.33%;
+      max-height: 327px;
+      padding: 32px;
+      backdrop-filter: blur(6px);
+    }
+
+    @include responsive(xxs){
+      max-width: 218px;
+      max-height: 250px;
+      padding: 32px;
+      backdrop-filter: blur(6px);
+    }
+  }
+  
+  .testimonial{
+    width: 308px;
+    height: 336px;
+
+    @include responsive(s){
+      width: 100%;
+      max-height: 200px;
+    }
+
+    @include responsive(xxs){
+      max-width: 157px;
+      max-height: 144px;
+    }
+  }
+
+  .swiper2{
+    @include responsive(xxs){
+      width: 100%;
+    }
+  }

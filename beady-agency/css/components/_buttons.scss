@@ -1,0 +1,157 @@
+a{
+    text-decoration: none;
+    color: $white-normal;
+    @include typeface-2(p2, desktop);
+    @include responsive(s){
+        @include typeface-2(p2, mobile);
+    }
+    transition: .5s ease;
+
+    &:hover{
+        opacity: .8;
+    }
+}
+
+.btn-primary{
+    max-width: 405px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    padding: 16px 120px 16px 32px;
+    color: $white-normal;
+    background-color: $primary-normal;
+    border-radius: 40px;
+    transition: .5s ease;
+
+    @include typeface-2(h4,desktop);
+    @include responsive(s){
+        @include typeface-2(h4, mobile);
+    }
+
+
+    &::after{
+        content: '';
+        width: 64px;
+        height: 26px;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(-50%, -50%) translate3d(0,0,0);
+        background-image: url('../svg/icon-arrow.svg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        transition: .5s ease;
+    }
+
+    &:hover{
+        opacity: .9;
+        
+        &::after{
+            transform: translate(-50%, -50%) translate3d(10px,0,0);
+        }
+    }
+
+    @include responsive(s){
+        margin-top: 36px;
+    }
+
+    @include responsive(xs){
+        max-width: 208px;
+        padding: 12px 56px 12px 16px;
+        margin-top: 20px;
+
+        &::after{
+        content: '';
+        width: 30px;
+        height: 16px;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        background-image: url('../svg/icon-arrow-small.svg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        }
+        
+    }
+
+}
+
+.btn-newsletter{
+    cursor: pointer;
+    position: relative;
+    width: 103px;
+    height: 66px;
+    padding: 16px;
+    background-color: $secondary-normal;
+    border-bottom: 2px solid $gray-2;
+    border-right: 2px solid $gray-2;
+    border-top: 2px solid $gray-2;
+    border-left: 0;
+    border-radius: 0 40px 40px 0;
+    transition: .5s ease;
+    transform: translate3d(-2px, 0, 0);
+
+    &::after{
+        content: '';
+        width: 64px;
+        height: 26px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) translate3d(0,0,0);
+        background-image: url('../svg/icon-arrow.svg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        transition: .5s ease;
+    }
+
+    &:hover{
+        
+        &::after{
+            transform: translate(-50%, -50%) translate3d(10px,0,0);
+        }
+    }
+}
+
+input{
+    max-width: 360px;
+    padding: 16px 40px;
+    border-radius: 40px 0px 0px 40px;
+    border: 2px solid $gray-2;
+    background-color: transparent;
+    color: $gray-2;
+
+    @include typeface-2(h5, desktop);
+    @include responsive(s){
+        @include typeface-2(h5, mobile);
+    }
+}
+
+::placeholder{
+    font-family: Kanit;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 4.6px;
+    color: $gray-2;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    font-family: Kanit;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 4.6px;
+    color: $gray-2;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    font-family: Kanit;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 4.6px;
+    color: $gray-2;
+}

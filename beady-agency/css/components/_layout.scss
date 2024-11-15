@@ -1,0 +1,856 @@
+//Layout of the project
+
+//Container of the devices
+$container-xl: 1440px;
+$container-l: 1272px;
+$container-m: 960px;
+$container-s: 768px;
+$container-xs: 540px;
+$gutter: 24px;
+
+
+@mixin responsive($device){
+
+    @if $device == xl{
+        //For resolutions above 1440px
+        @media screen and (min-width: $container-xl){
+            @content;
+        }
+    }
+    @else if $device == l{
+        //For resolutions between 1140px and 1400px
+        @media screen and (max-width: $container-xl) and (min-width:$container-l){
+            @content;
+        }
+    }
+    @else if $device == m{
+        //For resolutions between 960px and 1140px
+        @media screen and (max-width: $container-l) and (min-width:$container-m){
+            @content;
+        }
+    }
+    @else if $device == s{
+        //For resolutions below 960px
+        @media screen and (max-width: $container-m){
+            @content;
+        }
+    }
+    @else if $device == xs{
+        //For resolutions below 768px
+        @media screen and (max-width: $container-s){
+            @content;
+        }
+    }
+    @else if $device == xxs{
+        //For resolutions below 540px
+        @media screen and (max-width: $container-xs){
+            @content;
+        }
+    }
+}
+
+.container{
+    max-width: $container-xl;
+    margin: 0 auto;
+    padding: 96px 24px;
+    position: relative;
+    overflow: hidden;
+
+    @include responsive(s){
+        flex-direction: column;
+        padding: 64px 48px;
+    }
+
+    @include responsive(xxs){
+      flex-direction: column;
+      padding: 36px 24px;
+    }
+}
+
+.container-2{
+    max-width: 1690px;
+    margin: 0 auto;
+    padding: 96px 24px;
+    position: relative;
+    
+    @include responsive(s){
+        flex-direction: column;
+        padding: 64px 48px;
+    }
+
+    @include responsive(xxs){
+      flex-direction: column;
+      padding: 36px 24px;
+    }
+}
+
+.visible{
+  overflow: visible;
+}
+
+.disappear{
+    @include responsive(s){
+      display: none;
+    }
+}
+
+  .text-nobreak{
+    white-space: nowrap;
+}
+  
+  .h-100{
+    height: 100vh;
+}
+  
+  .h-100p{
+    height: 100%;
+}
+  
+  .relative {
+    position: relative;
+}
+
+  //Display flex
+  .flex  {
+    display: flex;
+}
+  .flex-start-top{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+}
+  .flex-start {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+  .flex-end {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+  .flex-start-column {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+  .flex-end-column {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+}
+  
+  .flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+  .flex-center-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+  
+  .flex-space {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+  .flex-space-column {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+  .flex-around{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.align-end{
+  align-self: flex-end;
+}
+
+.align-start{
+  align-self: flex-start;
+}
+
+.align-center{
+  align-self: center;
+}
+  
+  .flex-column {
+    flex-direction: column;
+}
+
+  .flex-wrap {
+    flex-wrap: wrap;
+}
+  
+  .flex-item-1 {
+    flex: 1 1 360px;
+}
+  
+  .flex-item-2 {
+    flex: 2 1 360px;
+}
+  
+  .flex-item-3 {
+    flex: 3 1 360px;
+}
+  
+  .flex-item-4 {
+    flex: 4 1 360px;
+}
+  
+  .flex-item-5 {
+    flex: 5 1 360px;
+}
+  
+  .flex-auto {
+    flex: 1 1 auto;
+}
+  
+  // Width's
+  .w-auto {
+    width: auto;
+}
+  .h-auto {
+    height: auto !important;
+}
+  .h-100{
+    height: 100%;
+}
+  .h-80{
+    height: 80%;
+}
+  .h-50{
+    height: 50%;
+}
+  .w-100 {
+    width: 100%;
+}
+  .w-75 {
+    width: 75%;
+}
+  .w-50 {
+    width: 50%;
+}
+  .w-25 {
+    width: 25%;
+}
+
+.object-contain{
+  object-fit: contain;
+}
+
+.object-cover{
+  object-fit: cover;
+}
+// ======================================
+// ============ INTRODUCTION ============
+// ======================================
+.introduction {
+  width: 100%;
+  height: 100vh;
+  background-color: $primary-dark;
+  position: fixed;
+  z-index: 998;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.text-intro{
+  font-family: 'K2D', sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.subtext-intro{
+  font-family: 'Kanit', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 10.86px;
+  text-transform: uppercase;
+}
+  
+// ======================================
+// =========== SECTION HERO =============
+// ======================================
+
+.bg-hero{
+    width: 100%;
+    height: 95%;
+    overflow: hidden;
+    z-index: -5;
+    position: absolute;
+    background-image: url("../img/bg-hero-image.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include responsive(l){
+      height: 920px;
+      background-position: -200px center;
+    }
+
+    @include responsive(s){
+      height: 580px;
+      background-position: -200px center;
+    }
+
+    @include responsive(xxs){
+      height: 522px;
+      background-position: -200px center;
+    }
+  }
+  .circle-hero-1{
+    position: absolute;
+    top: 174px;
+    left: 182px;
+    width: 488px;
+    height: 488px;
+    border-radius: 488px;
+    background: linear-gradient(143deg, rgba(224, 226, 109, 0.60) 0%, rgba(214, 15, 247, 0.2) 80%);
+    backdrop-filter: blur(24px);
+
+    @include responsive(l){
+      width: 372px;
+      height: 372px;
+      top: 105px;
+      left: 45px;
+    }
+
+    @include responsive(s){
+      width: 300px;
+      height: 300px;
+      top: 80px;
+      left: 80px;
+    }
+
+    @include responsive(xxs){
+      width: 158px;
+      height: 158px;
+      top: 105px;
+      left: 45px;
+    }
+  }
+  .circle-hero-2{
+    position: absolute;
+    top: 418px;
+    right: 410px;
+    width: 327px;
+    height: 327px;
+    border-radius: 327px;
+    background: linear-gradient(143deg, rgba(224, 226, 109, 0.60) 0%, rgba(214, 15, 247, 0.2) 80%);
+    filter: blur(12px);
+    backdrop-filter: blur(12px);
+    z-index: -1;
+
+    @include responsive(l){
+      width: 300px;
+      height: 300px;
+      top: 184px;
+      right: 0;
+    }
+
+    @include responsive(s){
+      width: 200px;
+      height: 200px;
+      top: 250px;
+      right: 80px;
+    }
+
+    @include responsive(xxs){
+      width: 106px;
+      height: 106px;
+      top: 184px;
+      right: 0;
+    }
+  }
+
+.text-hero-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.text-right-container{
+    width: 776px;
+    text-align: right;
+    font-size: 96px;
+    transform: translate3d(-150px,0,0);
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-self: flex-end;
+
+    @include responsive(s){
+      transform: translate3d(-80px,0,0);
+      max-width: 340px;
+    }
+
+    @include responsive(xxs){
+      transform: translate3d(0px,0,0);
+      max-width: 340px;
+    }
+
+    h3{
+      text-align: right;
+      align-self: flex-end;
+      @include responsive(xxs){
+        max-width: 195px;
+        justify-self: flex-end;
+      }
+    }
+}
+
+.text-left{
+
+  @include responsive(s){
+    max-width: 500px;
+    transform: translate3d(80px,0 ,0);
+  }
+
+  @include responsive(xxs){
+    max-width: 500px;
+    transform: translate3d(0px,0 ,0);
+  }
+}
+
+.text-right{
+    align-self: flex-end;
+}
+
+// ======================================
+// =========== SECTION ABOUT ============
+// ======================================
+.svg-squares-about{
+  width: 1441px;
+  transform: scale(1);
+
+  @include responsive(s){
+    width: 100%;
+    transform: scale(1.88);
+  }
+
+  @include responsive(xs){
+    width: 100%;
+    transform: scale(2.15);
+  }
+
+  @include responsive(xxs){
+    width: 100%;
+    transform: scale(3.3);
+  }
+  
+}
+
+.bg-squares-about{
+  width: 100%;
+  overflow-x: hidden;
+  position: absolute;
+  top: 120px;
+  left: -50px;
+  z-index: -3;
+
+  @include responsive(s){
+    top: 56px;
+    left: 0;
+  }
+
+  @include responsive(xs){
+    top: 60px;
+    left: 0;
+  }
+
+  @include responsive(xxs){
+    top: -10px;
+    left: 0;
+  }
+}
+
+.title{
+    color: #333333;
+    text-align: center;
+    transform: translate3d(-236px,77px ,0);
+
+    @include responsive(l){
+      text-align: center;
+      transform: translate3d( -126px, 77px,0);
+    }
+
+    @include responsive(s){
+      text-align: start;
+      transform: translate3d(0,0,0);
+    }
+
+    @include responsive(xxs){
+      text-align: start;
+      transform: translate3d(0,0,0);
+    }
+
+    span{
+      color: #D9D9D9;
+
+      @include responsive(s){
+        color: $gray-1;
+      }
+
+      @include responsive(xxs){
+        color: $gray-1;
+      }
+    }
+}
+
+.about-items{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+
+  @include responsive(s){
+    flex-direction: column-reverse;
+  }
+
+  @include responsive(xxs){
+    flex-direction: column-reverse;
+  }
+}
+
+.about-items-left{
+  max-width: 512px;
+  margin-top: 120px;
+
+  @include responsive(s){
+    margin: 36px auto 0 auto;
+    
+  }
+
+  @include responsive(xxs){
+    margin-top: 36px;
+  }
+}
+
+.about-items-right{
+    width: 100%;
+    height: 735px;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+
+    @include responsive(l){
+      height: 632px;
+    }
+
+    @include responsive(s){
+      height: 520px;
+      
+    }
+
+    @include responsive(xxs){
+      height: 293px;
+    }
+}
+
+.about-image-1{
+    z-index: -3;
+    transform: translate3d(-160px, -32px, 0);
+    width: 709px;
+    height: 473px;
+
+    @include responsive(l){
+      width: 632px;
+      height: 421px;
+      transform: translate3d(-56px, -16px, 0);
+    }
+
+    @include responsive(s){
+      width: 503px;
+      height: 335px;
+      transform: translate3d(-48px, -0px, 0);
+    }
+    
+    @include responsive(xxs){
+      width: 283px;
+      height: 188px;
+      transform: translate3d(0, 32px, 0);
+    }
+}
+
+.image2-container{
+    width: 486px;
+    height: 324px;
+    position: absolute;
+    bottom: 56px;
+    left: -120px;
+
+    @include responsive(l){
+      width: 409px;
+      height: 267px;
+      bottom: 48px;
+      left: -96px;
+    }
+
+    @include responsive(s){
+      width: 345px;
+      height: auto;
+      bottom: 24px;
+      left: 150px;
+    }
+
+    @include responsive(xxs){
+      width: 194px;
+      height: 130px;
+      bottom: 0;
+      left: 16px;
+    }
+}
+
+// ======================================
+//=========== SECTION CLIENTS ===========
+// ======================================
+.clients-container{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  @include responsive(s){
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  @include responsive(xxs){
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+.icon-clients{
+  margin-right: 64px;
+
+  @include responsive(l){
+    margin-right: 48px;
+    margin-top: 42px;
+    max-width: 188px;
+  }
+
+  @include responsive(s){
+    margin-right: 48px;
+    margin-top: 42px;
+    max-width: 188px;
+  }
+
+  @include responsive(xxs){
+    margin-top: 42px;
+    max-width: 188px;
+  }
+
+  &:nth-child(-n+2){
+    @include responsive(xxs){
+      margin-top: 0;
+    }
+  }
+
+  &:nth-child(-2n+6), &:nth-child(7){
+    @include responsive(xxs){
+      margin-right: 0;
+
+    }
+  }
+
+}
+// ======================================
+// ======== SECTION OUR PROJECTS ========
+// ======================================
+.bg-projects{
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 9, 22, 1), rgba(7, 0, 16, 1));
+  position: absolute;
+  z-index: -2;
+
+  @include responsive(l){
+    height: 1278px;
+  }
+
+  @include responsive(s){
+    height: 1500px;
+  }
+
+  @include responsive(xxs){
+    height: 1235px;
+  }
+}
+
+.technologies-container{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  @include responsive(s){
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.technologies{
+  height: 116px;
+  padding: 8px 42px;
+  border: 1px solid #cccccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+  position: relative;
+
+  &:nth-child(-2n+6){
+    transform: translate3d(0, 48px, 0);
+  }
+
+  &::after{
+    content:'';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(166, 129, 242, 0.30);
+    position: absolute;
+    top: 0;
+    border-radius: 40px;
+    right: 10px;
+    z-index: -1;
+  }
+
+  @include responsive(s){
+    margin-top: 12px;
+    &:nth-child(-2n+6){
+      transform: translate3d(0, 0, 0);
+    }
+  }
+}
+
+.projects-info{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 115px;
+  
+
+  @include responsive(xxs){
+    flex-direction: column;
+    margin-top: 0;
+    div{
+      margin-top: 54px;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}
+
+// ======================================
+// ======= SECTION TESTIMONIALS =========
+// ======================================
+.bg-testimonials{
+  width: 100%;
+  height: 1126px;
+  position: absolute;
+  top: -138px;
+  left: 0;
+  overflow: hidden;
+  z-index: -4;
+  background-image: url("../img/bg-testimonials.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include responsive(s){
+    background-position: top right;
+    height: 870px;
+    width: 100%;
+  }
+
+  @include responsive(xxs){
+    background-position: top right;
+    height: 741px;
+    width: 100%;
+  }
+}
+
+// ======================================
+// ============ SECTION QUOTE ===========
+// ======================================
+.svg-squares-quote{
+  width: 1441px;
+  transform: scale(1);
+
+  @include responsive(s){
+    width: 100%;
+    transform: scale(1.6);
+  }
+
+  @include responsive(xs){
+    width: 100%;
+    transform: scale(2.54);
+  }
+
+  @include responsive(xxs){
+    width: 100%;
+    transform: scale(3.3);
+  }
+}
+
+.bg-squares-quote{
+  width: 100%;
+  overflow-x: hidden;
+  position: absolute;
+  top: -222px;
+  left: -100px;
+  z-index: -3;
+
+  @include responsive(s){
+    top: -178px;
+    left: 0;
+  }
+
+  @include responsive(xs){
+    top: -165px;
+    left: 0;
+  }
+
+  @include responsive(xxs){
+    top: -155px;
+    left: 0;
+  }
+}
+.quote{
+  max-width: 1233px;
+  color: #4D2C6B;
+  text-align: center;
+  font-size: 64px;
+  line-height: 125%;
+
+  @include responsive(s){
+    font-size: 48px;
+    line-height: normal;
+    margin-bottom: 16px;
+  }
+
+  @include responsive(xxs){
+    font-size: 32px;
+    line-height: normal;
+    margin-bottom: 16px;
+  }
+}
