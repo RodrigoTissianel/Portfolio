@@ -13671,7 +13671,7 @@ const kt = (e) => (
     }),
   Sg = u0([
     {
-      path: "/",
+      path: "/dogs",
       element: h.jsx(W0, {}),
       children: [
         { index: !0, element: h.jsx(Tv, {}) },
