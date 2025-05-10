@@ -13554,7 +13554,7 @@ const kt = (e) => (
   },
   hg = "modulepreload",
   mg = function (e) {
-    return "https://rodrigotissianel.vercel.app/dogs/" + e;
+    return "https://rodrigotissianel.vercel.app/dogs" + e;
   },
   _c = {},
   vg = function (t, n, r) {
