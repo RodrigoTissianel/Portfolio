@@ -13671,7 +13671,7 @@ const kt = (e) => (
     }),
   Sg = u0([
     {
-      path: "/dogs",
+      path: "https://rodrigotissianel.vercel.app/dogs",
       element: h.jsx(W0, {}),
       children: [
         { index: !0, element: h.jsx(Tv, {}) },
